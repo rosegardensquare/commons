@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zs</groupId>
+    <artifactId>commons</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>commons</name>
+    <!-- 模块说明：这里声明多个子模块 -->
+    <modules>
+        <module>common-base</module>
+    </modules>
+
+    <properties>
+        <java.version>11</java.version>
+
+    </properties>
+
+    <!--版本依赖-->
+    <!--    <dependencyManagement>-->
+    <!--        <dependencies>-->
+
+    <!--        </dependencies>-->
+    <!--    </dependencyManagement>-->
+    <dependencies>
+
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.47</version>
+        </dependency>
+
+        <!--lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--将 jar 上传到私服-->
+    <distributionManagement>
+        <repository>
+            <!--对应 maven settings 中的 server 的 id -->
+            <id>backend-naxus</id>
+            <name>releases</name>
+            <!--对应私服的 release 仓库-->
+            <url>http://localhost:8090/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>backend-naxus</id>
+            <name>snapshots</name>
+            <!--对应私服的 snapshots 仓库-->
+            <url>http://localhost:8090/repository/maven-snapshots/</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+
+</project>
