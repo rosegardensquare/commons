@@ -61,22 +61,22 @@
     </build>
 
     <!--将 jar 上传到私服-->
-    <distributionManagement>
-        <repository>
-            <!--对应 maven settings 中的 server 的 id -->
-            <id>backend-naxus</id>
-            <name>releases</name>
-            <!--对应私服的 release 仓库-->
-            <url>http://localhost:8090/repository/maven-releases/</url>
-        </repository>
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            &lt;!&ndash;对应 maven settings 中的 server 的 id &ndash;&gt;-->
+<!--            <id>backend-naxus</id>-->
+<!--            <name>releases</name>-->
+<!--            &lt;!&ndash;对应私服的 release 仓库&ndash;&gt;-->
+<!--            <url>http://localhost:8090/repository/maven-releases/</url>-->
+<!--        </repository>-->
 
-        <snapshotRepository>
-            <id>backend-naxus</id>
-            <name>snapshots</name>
-            <!--对应私服的 snapshots 仓库-->
-            <url>http://localhost:8090/repository/maven-snapshots/</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>-->
+<!--            <id>backend-naxus</id>-->
+<!--            <name>snapshots</name>-->
+<!--            &lt;!&ndash;对应私服的 snapshots 仓库&ndash;&gt;-->
+<!--            <url>http://localhost:8090/repository/maven-snapshots/</url>-->
+<!--        </snapshotRepository>-->
 
-    </distributionManagement>
+<!--    </distributionManagement>-->
 
 </project>
